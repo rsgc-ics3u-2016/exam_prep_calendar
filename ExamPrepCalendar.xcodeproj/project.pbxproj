@@ -25,7 +25,6 @@
 /* Begin PBXFileReference section */
 		810DC5241ECE12AE003B71EE /* ExamPrepCalendar */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExamPrepCalendar; sourceTree = BUILT_PRODUCTS_DIR; };
 		810DC5271ECE12AE003B71EE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		810DC52F1ECE131E003B71EE /* Exam Prep - 1 - Calendar - Algorithm.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exam Prep - 1 - Calendar - Algorithm.docx"; sourceTree = "<group>"; };
 		810DC5311ECE1335003B71EE /* Exam Prep - 1 - Calendar.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Exam Prep - 1 - Calendar.pdf"; sourceTree = "<group>"; };
 		815565E91EE1E4F600DA8944 /* Exam Prep - 1 - Calendar - Algorithm.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Exam Prep - 1 - Calendar - Algorithm.pdf"; sourceTree = "<group>"; };
 		81E2E2ED1ED74B5C00B3D2C8 /* Exam Prep - 1 - Calendar - Test Plan.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Exam Prep - 1 - Calendar - Test Plan.pdf"; sourceTree = "<group>"; };
@@ -70,7 +69,6 @@
 		810DC52E1ECE12B5003B71EE /* Documents */ = {
 			isa = PBXGroup;
 			children = (
-				810DC52F1ECE131E003B71EE /* Exam Prep - 1 - Calendar - Algorithm.docx */,
 				815565E91EE1E4F600DA8944 /* Exam Prep - 1 - Calendar - Algorithm.pdf */,
 				810DC5311ECE1335003B71EE /* Exam Prep - 1 - Calendar.pdf */,
 				81E2E2ED1ED74B5C00B3D2C8 /* Exam Prep - 1 - Calendar - Test Plan.pdf */,
