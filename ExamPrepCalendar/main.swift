@@ -19,31 +19,43 @@ import Foundation
  Make use of your test plan and algorithm to ensure your code is complete.
  
  */
-var inputToProcess : String = ""
+func getInteger(from: Int, through: Int, with prompt: String) -> Int {
+    
+    // Repeat until we get what we want
+    repeat {
+        
+        // Show the prompt
+        print(prompt)
+        
+        // Get the input
+        var input : String?
+        input = readLine()
+        
+        // Check that input is not nil
+        if let notNilInput = input {
+            
+            // Check that input is an integer
+            if let integerInput = Int(notNilInput) {
+                
+                // Is input in the desired range?
+                if integerInput >= from && integerInput <= through {
+                    
+                    return integerInput // return the valid integer; breaks the loop and exits the function
+                    
+                }
+                
+            }
+            
+        }
 
-// Loop until valid input is received
-while inputToProcess == "" {
-    
-    // Show the prompt
-    print("Ask the question here? ", terminator: "")
-    
-    // Get the user's input
-    var input : String?
-    input = readLine()
-    
-    // Use optional binding to see if the string can be unwrapped (to see if it is not nil)
-    if let notNilInput = input {
-        
-        // You probably need to add additional checks to be sure the
-        // input received is valid
-        // Add checks as needed...
-        
-        // Save the input given, as we are certain it's what we are looking for now
-        inputToProcess = notNilInput
-        
-    }
+    } while true
     
 }
+
+// Get the day the month begins on
+let start = getInteger(from: 1, through: 7, with: "Enter day:")
+let daysInMonth = getInteger(from: 28, through: 31, with: "Enter the number of days in the month:")
+let specialDay = getInteger(from: 1, through: daysInMonth, with: "Enter the special day:")
 
 /*
  
@@ -54,10 +66,57 @@ while inputToProcess == "" {
  Make use of your test plan and algorithm to ensure your code is complete.
  
  */
-
-// Add 'process' code below....
-print("replace with process logic")
-
+let padding = " "
+let spacer = " "
+var currentDay = 0 // day of the month
+var output = "Sun Mon Tue Wed Thu Fri Sat\n"
+for position in 1...37 {
+    
+    // When the month hasn't started yet
+    if position < start {
+        
+        output += padding + padding + padding
+        
+    } else {
+        
+        // Increment the day of the month
+        currentDay += 1
+        
+        // Add padding for a spot in the calendar
+        if currentDay < 10 { // single digit day
+            
+            if currentDay == specialDay {
+                output += padding + "*" + String(currentDay)
+            } else {
+                output += padding + padding + String(currentDay)
+            }
+            
+        } else {
+            
+            if currentDay == specialDay {
+                output += "*" + String(currentDay)
+            } else {
+                output += padding + String(currentDay)
+            }
+            
+        }
+        
+        // Check to see if month is done
+        if currentDay == daysInMonth {
+            break
+        }
+        
+    }
+    
+    // Add the spacer
+    output += spacer
+    
+    // Bump to next line when we've printed a position at the end of a week (7 positions)
+    if position % 7 == 0 {  // when the remainder is 0 after dividing by 7...
+        output += "\n"
+    }
+    
+}
 
 /*
  
@@ -69,5 +128,4 @@ print("replace with process logic")
  
  */
 
-// Add 'output' code below... replace what is here as needed.
-print("The input given was: \(inputToProcess)")
+print(output)
